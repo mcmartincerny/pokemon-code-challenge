@@ -1,0 +1,92 @@
+.favoriteIcon {
+    margin-left: auto !important;
+    cursor: pointer;
+    color: #ff5656;
+    width: 2rem !important;
+    height: 2rem !important;
+    animation: rotate 0.5s linear 0s 1;
+}
+
+.favoriteIcon:not(.animate) {
+    animation-duration: 0s;
+}
+
+.favoriteIcon:hover {
+    scale: 1.2;
+}
+
+@media (min-width: 1500px) {
+    .favoriteIcon {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(90deg) scale(0.7);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(0);
+    }
+
+    75% {
+        transform: rotate(270deg) scale(0.7);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+/* Message */
+
+.successMessage,
+.errorMessage {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    background-color: #2564CB;
+    color: white;
+    padding: 5px;
+    border-radius: 100px;
+    animation: popUp 0.5s linear 0s 1 forwards;
+}
+
+.errorMessage {
+    padding: 15px;
+    background-color: #ff5656;
+}
+
+@keyframes popUp {
+    0% {
+        transform: translateY(100px) translateX(-50%)
+    }
+
+    50% {
+        transform: translateY(50px) translateX(-50%)
+    }
+
+    75% {
+        transform: translateY(-20px) translateX(-50%) scale(1.3)
+    }
+
+    100% {
+        transform: translateY(0px) translateX(-50%)
+    }
+}
+
+@media (min-width: 800px) {
+
+    .successMessage,
+    .errorMessage {
+        padding: 20px;
+        font-size: 2rem;
+    }
+}

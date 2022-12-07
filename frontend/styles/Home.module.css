@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.pokemonList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 5rem;
+}
+
+.footer {
+  display: flex;
+  padding: 1rem 0;
+  border-top: 1px solid #cacaca;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchAndFilterAndIcons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search {
+  flex-grow: 1;
+  min-width: 150px !important;
+  margin: 5px !important;
+}
+
+.filter {
+  flex-grow: 1;
+  min-width: 140px !important;
+  margin: 5px !important;
+}
+
+.iconsContainer {
+  margin-left: auto;
+}
+
+.viewIcon {
+  cursor: pointer;
+  color: #a7a7a7;
+  width: 3rem !important;
+  height: 3rem !important;
+  animation: rotate 0.5s linear 0s 1;
+}
+
+.viewIcon.active,
+.viewIcon:hover {
+  color: #2564CB;
+}

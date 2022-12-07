@@ -1,0 +1,166 @@
+.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.horizontal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
+
+.left {
+    border-right: 1px solid #eaeaea;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    max-width: 50vh;
+    margin-bottom: 20px;
+}
+
+.audioHeartWrapper {
+    margin: 10px;
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.audioHeartWrapper svg {
+    cursor: pointer;
+    scale: 2;
+}
+
+.audioHeartWrapper svg:hover {
+    scale: 2.3;
+}
+
+
+.stats {
+    align-items: flex-start;
+    font-size: 1rem;
+}
+
+
+.stat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    font-weight: bold;
+    background-color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    color: white;
+}
+
+.label svg {
+    margin-right: 3px;
+}
+
+.value {
+    padding: 5px;
+    margin: 2px;
+    background-color: white;
+    color: var(--color);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-radius: 100px;
+}
+
+@media (max-width: 500px) {
+    .stats {
+        font-size: 0.7rem;
+    }
+
+    .label {
+        padding: 2px;
+    }
+
+    .favoriteWrapper {
+        margin-top: auto;
+        margin-left: auto;
+        scale: 1.5;
+    }
+}
+
+.stat[data-type="HP"] {
+    --color: #2564CB;
+}
+
+.stat[data-type="CP"] {
+    --color: #ff3737;
+}
+
+.stat[data-type="Height"] {
+    --color: #8bd600;
+}
+
+.stat[data-type="Weight"] {
+    --color: #00c3ff;
+}
+
+.stat[data-type="Resistance"] {
+    --color: #ff8944;
+}
+
+.stat[data-type="Flee rate"] {
+    --color: #ff80f9;
+}
+
+.stat[data-type="Category"] {
+    --color: #ffbb00;
+}
+
+.requirements {
+    width: fit-content;
+    height: fit-content;
+
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2px;
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    color: #2564CB;
+    border: 3px solid #2564CB;
+    border-radius: 100px;
+}
+
+.requirements svg {
+    font-size: 5rem;
+}
+
+@media (max-width: 500px) {
+    .requirements {
+        padding: 5px;
+        width: 70px;
+        font-size: 0.7rem;
+    }
+
+    .requirements svg {
+        font-size: 3rem;
+    }
+}
